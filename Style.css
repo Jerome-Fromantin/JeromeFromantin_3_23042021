@@ -1,0 +1,73 @@
+body {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+#logosection {
+  margin-top: -8px;
+}
+
+#logo {
+  width: 45%;
+  margin: 22px 0 12px 0;
+}
+
+#lieusection {
+  background: #EAEAEA;
+  padding: 13px 0;
+  border-top: 4px #DDD solid;
+  margin: 0 -8px;
+}
+
+#icone-lieu {
+  margin-right: 12px;
+}
+
+#presentation {
+  background: #F6F6F6;
+  padding: 0px 20px;
+  margin: -20px -8px 0 -8px;
+}
+
+h1 {
+  padding: 35px 50px 0 50px;
+  margin-bottom: -5px;
+}
+
+p {
+  font-size: 18px;
+}
+
+#explorer {
+  background: #FF79DA;
+  color: white;
+  font-size: 16px;
+  padding: 15px;
+  border-color: transparent;
+  border-radius: 50px;
+  margin: 10px 0 55px 0;
+}
+
+h3 {
+  font-family: "Shrikhand", cursive;
+}
+
+#color1, #color2, #color3 {
+  width: 20px;
+  height: 20px;
+  margin: 10px auto;
+}
+
+#color1 {
+  background: #9356DC;
+}
+
+#color2 {
+  background: #FF79DA;
+}
+
+#color3 {
+  background: #99E2D0;
+}
+
+/*# sourceMappingURL=Style.css.map */
