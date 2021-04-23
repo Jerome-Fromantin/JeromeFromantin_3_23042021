@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>ohmyfood</title>
+        <meta name="description" content='Projet de formation "OpenClassrooms" - Animations CSS.'>
+        <meta name="keywords" content="OpenClassrooms, intégration, maquette, mobile,
+        tablette, desktop, HTML, CSS, animation, responsive, flexbox">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Jérôme Fromantin">
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="Style-MediaQuery.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap">
+        <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
+        <!-- Caractères spéciaux : À Â Ç È É Ê Ë Î Ô Œ œ ► … «» — -->
+    </head>
+
+    <body>
+        <header>
+            <div id="logosection">
+                <img src="Images/Logo.png" alt="Logo" id="logo">
+            </div>
+            <div id="lieusection">
+                <i class="fas fa-map-marker-alt" id="icone-lieu"></i> Paris, Belleville
+            </div>
+            <section id="presentation">
+                <h1>Réservez le menu qui vous convient</h1>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <button type="button" id="explorer">Explorer nos restaurants</button>
+            </section>
+        </header>
+        <main>
+            <section id="fonction">
+                <h2>Fonctionnement</h2>
+                <p>-icône- Choisissez un restaurant</p>
+                <p>-icône- Composez votre menu</p>
+                <p>-icône- Dégustez au restaurant</p>
+            </section>
+            <section id="restaurants">
+                <h2>Restaurants</h2>
+                <div id="restau-tofs">
+                    <!-- Chaque carte est cliquable dans son intégralité. -->
+                    <a href="#" class="restau-link">
+                        <div class="restau-card">
+                            <div id="restau-img1"></div>
+                            <span class="restau-tit">La palette du goût</span>
+                            <br><span class="restau-tex">Ménilmontant</span>
+                        </div>
+                    </a>
+                    <a href="#" class="restau-link">
+                        <div class="restau-card">
+                            <div id="restau-img2"></div>
+                            <span class="restau-tit">La note enchantée</span>
+                            <br><span class="restau-tex">Charonne</span>
+                        </div>
+                    </a>
+                    <a href="#" class="restau-link">
+                        <div class="restau-card">
+                            <div id="restau-img3"></div>
+                            <span class="restau-tit">À la française</span>
+                            <br><span class="restau-tex">Cité Rouge</span>
+                        </div>
+                    </a>
+                    <a href="#" class="restau-link">
+                        <div class="restau-card">
+                            <div id="restau-img4"></div>
+                            <span class="restau-tit">Le délice des sens</span>
+                            <br><span class="restau-tex">Folie-Méricourt</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <h3>ohmyfood</h3>
+            <p><a href="#">-icône- Proposer un restaurant</a></p>
+            <p><a href="#">-icône- Devenir partenaire</a></p>
+            <p><a href="#">Mentions légales</a></p>
+            <p><a href="mailto:email@sample.com">Contact</a></p>
+        </footer>
+        <div id="color1"></div>
+        <div id="color2"></div>
+        <div id="color3"></div>
+    </body>
+</html>
