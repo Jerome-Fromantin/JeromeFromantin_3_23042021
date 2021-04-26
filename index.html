@@ -10,7 +10,7 @@
         <meta name="author" content="Jérôme Fromantin">
         <link rel="stylesheet" href="Style.css">
         <link rel="stylesheet" href="Style-MediaQuery.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap">
         <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
         <!-- Caractères spéciaux : À Â Ç È É Ê Ë Î Ô Œ œ ► … «» — -->
     </head>
@@ -25,50 +25,71 @@
             </div>
             <section id="presentation">
                 <h1>Réservez le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <p id="decouvrez">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                 <button type="button" id="explorer">Explorer nos restaurants</button>
             </section>
         </header>
         <main>
             <section id="fonction">
                 <h2>Fonctionnement</h2>
-                <p>-icône- Choisissez un restaurant</p>
-                <p>-icône- Composez votre menu</p>
-                <p>-icône- Dégustez au restaurant</p>
+                <div id="fonc-ligne1">
+                    <div class="fonc-num">1</div>
+                    <div class="fonc-gris">
+                        <i class="fas fa-mobile-alt fonc-ico"></i>
+                        <span class="fonc-tex">Choisissez un restaurant</span>
+                    </div>
+                </div>
+                <div id="fonc-ligne2">
+                    <div class="fonc-num">2</div>
+                    <div class="fonc-gris">
+                        <i class="fas fa-list-ul fonc-ico"></i>
+                        <span class="fonc-tex">Composez votre menu</span>
+                    </div>
+                </div>
+                <div id="fonc-ligne3">
+                    <div class="fonc-num">3</div>
+                    <div class="fonc-gris">
+                        <i class="fas fa-store fonc-ico"></i>
+                        <span class="fonc-tex">Dégustez au restaurant</span>
+                    </div>
+                </div>
             </section>
             <section id="restaurants">
                 <h2>Restaurants</h2>
-                <div id="restau-tofs">
-                    <!-- Chaque carte est cliquable dans son intégralité. -->
-                    <a href="#" class="restau-link">
-                        <div class="restau-card">
-                            <div id="restau-img1"></div>
-                            <span class="restau-tit">La palette du goût</span>
-                            <br><span class="restau-tex">Ménilmontant</span>
+                <!-- Chaque carte est cliquable dans son intégralité. -->
+                <a href="#" class="restau-link">
+                    <div class="restau-card">
+                        <div id="restau-img1"></div>
+                        <div class="restau-descr">
+                            <div>
+                                <span class="restau-tit">La palette du goût</span>
+                                <br><span class="restau-tex">Ménilmontant</span>
+                            </div>
+                            <i class="far fa-heart coeur"></i>
                         </div>
-                    </a>
-                    <a href="#" class="restau-link">
-                        <div class="restau-card">
-                            <div id="restau-img2"></div>
-                            <span class="restau-tit">La note enchantée</span>
-                            <br><span class="restau-tex">Charonne</span>
-                        </div>
-                    </a>
-                    <a href="#" class="restau-link">
-                        <div class="restau-card">
-                            <div id="restau-img3"></div>
-                            <span class="restau-tit">À la française</span>
-                            <br><span class="restau-tex">Cité Rouge</span>
-                        </div>
-                    </a>
-                    <a href="#" class="restau-link">
-                        <div class="restau-card">
-                            <div id="restau-img4"></div>
-                            <span class="restau-tit">Le délice des sens</span>
-                            <br><span class="restau-tex">Folie-Méricourt</span>
-                        </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
+                <a href="#" class="restau-link">
+                    <div class="restau-card">
+                        <div id="restau-img2"></div>
+                        <span class="restau-tit">La note enchantée</span>
+                        <br><span class="restau-tex">Charonne</span>
+                    </div>
+                </a>
+                <a href="#" class="restau-link">
+                    <div class="restau-card">
+                        <div id="restau-img3"></div>
+                        <span class="restau-tit">À la française</span>
+                        <br><span class="restau-tex">Cité Rouge</span>
+                    </div>
+                </a>
+                <a href="#" class="restau-link">
+                    <div class="restau-card">
+                        <div id="restau-img4"></div>
+                        <span class="restau-tit">Le délice des sens</span>
+                        <br><span class="restau-tex">Folie-Méricourt</span>
+                    </div>
+                </a>
             </section>
         </main>
         <footer>

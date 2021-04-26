@@ -39,19 +39,143 @@ h1 {
     margin-bottom: -5px
 }
 
-p {
+#decouvrez {
     font-size: 18px;
+    font-weight: 100
 }
 
 #explorer {
-    background: $secondaire;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, $secondaire, $primaire);
+    box-shadow:0px 5px 5px #CCC;
     color: white;
     font-size: 16px;
-    padding: 15px;
-    border-color: transparent;
+    padding: 15px 20px;
+    border-width: 0;
     border-radius: 50px;
     margin: 10px 0 55px 0
 }
+
+h2 {
+    text-align: left;
+    margin: 50px 0 0 10px
+}
+
+#fonc-ligne1, #fonc-ligne2, #fonc-ligne3 {
+    cursor: pointer;
+    display: flex;
+    margin: 25px 0
+}
+
+#fonc-ligne3 {
+    margin-bottom: 70px
+}
+
+.fonc-num {
+    align-self: center;
+    background: $primaire;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 50px;
+    margin: 0 -10px 0 10px;
+    z-index: 2
+}
+
+.fonc-gris {
+    background: #F6F6F6;
+    box-shadow: 0px 5px 5px #DDD;
+    width: 75%;
+    text-align: left;
+    padding: 26px;
+    border-radius: 20px;
+    margin-left: -2px
+}
+
+.fonc-ico {
+    color: #777;
+    font-size: 20px;
+    margin: 0 20px 0 8px
+}
+
+.fonc-tex {
+    font-weight: bold
+}
+
+#restaurants {
+    border: 1px transparent solid;
+    background: #F6F6F6;
+    padding: 0px 20px;
+    margin: 0 -8px
+}
+
+.restau-link {
+    text-decoration: none;
+    color: black;
+    width: 100%
+}
+
+/* A MODIFIER */
+.restau-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px #DDD;
+    text-align: left;
+    height: auto;
+    margin-bottom: 40px
+}
+
+.restau-descr {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 15px 0
+}
+
+.restau-tit, .restau-tex {
+    padding-left: 15px
+}
+
+.restau-tit {
+    font-size: 18px;
+    font-weight: bold
+}
+
+.restau-tex {
+    font-size: 17px;
+    font-weight: 100;
+    margin-top: 10px
+}
+
+.coeur {
+    align-self: center;
+    font-size: 20px;
+    margin-right: 25px
+}
+
+#restau-img1, #restau-img2, #restau-img3, #restau-img4 {
+    background-position: center;
+    background-size: cover;
+    height: 175px;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 10px
+}
+
+#restau-img1 {
+    background-image: url(Images/La-palette.jpg);
+    background-position: center bottom;
+}
+
+#restau-img2 {
+    background-image: url(Images/La-note.jpg)
+}
+
+#restau-img3 {
+    background-image: url(Images/A-la-francaise.jpg)
+}
+
+#restau-img4 {
+    background-image: url(Images/Le-delice.jpg)
+}
+/* FIN */
 
 h3 {
     font-family: 'Shrikhand', cursive;
