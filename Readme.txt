@@ -21,3 +21,4 @@ Travail à faire :
 - Ajout des animations sur les 4 autres pages,
 - Media queries pour tablette et desktop pour la page d'accueil,
 - Media queries pour tablette et desktop pour les 4 autres pages.
+- Et on verra pour la suite...
