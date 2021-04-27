@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap">
         <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
         <!-- Caractères spéciaux : À Â Ç È É Ê Ë Î Ô Œ œ ► … «» — -->
+        <!-- Commande à inclure dans le terminal : ./dart-sass/sass sass/Style.scss Style.css tiret-tiret-watch -->
     </head>
 
     <body>
@@ -56,52 +57,62 @@
             </section>
             <section id="restaurants">
                 <h2>Restaurants</h2>
-                <!-- Chaque carte est cliquable dans son intégralité. -->
-                <a href="#" class="restau-link">
-                    <div class="restau-card">
-                        <div id="restau-img1"></div>
-                        <div class="restau-descr">
-                            <div>
-                                <span class="restau-tit">La palette du goût</span>
-                                <br><span class="restau-tex">Ménilmontant</span>
-                            </div>
-                            <i class="far fa-heart coeur"></i>
+                <div class="restau-card" id="card1">
+                    <div class="nouveau">Nouveau</div>
+                    <div id="restau-img1"></div>
+                    <div class="restau-descr">
+                        <div>
+                            <span class="restau-tit">La palette du goût</span>
+                            <br><span class="restau-tex">Ménilmontant</span>
                         </div>
+                        <a href="La-palette.html" class="restau-link"><i class="far fa-heart coeur"></i></a>
                     </div>
-                </a>
-                <a href="#" class="restau-link">
-                    <div class="restau-card">
-                        <div id="restau-img2"></div>
-                        <span class="restau-tit">La note enchantée</span>
-                        <br><span class="restau-tex">Charonne</span>
+                </div>
+                <div class="restau-card">
+                    <div class="nouveau">Nouveau</div>
+                    <div id="restau-img2"></div>
+                    <div class="restau-descr">
+                        <div>
+                            <span class="restau-tit">La note enchantée</span>
+                            <br><span class="restau-tex">Charonne</span>
+                        </div>
+                        <a href="La-note.html" class="restau-link"><i class="far fa-heart coeur"></i></a>
                     </div>
-                </a>
-                <a href="#" class="restau-link">
-                    <div class="restau-card">
-                        <div id="restau-img3"></div>
-                        <span class="restau-tit">À la française</span>
-                        <br><span class="restau-tex">Cité Rouge</span>
+                </div>
+                <div class="restau-card">
+                    <div id="restau-img3"></div>
+                    <div class="restau-descr">
+                        <div>
+                            <span class="restau-tit">À la française</span>
+                            <br><span class="restau-tex">Cité Rouge</span>
+                        </div>
+                        <a href="A-la-francaise.html" class="restau-link"><i class="far fa-heart coeur"></i></a>
                     </div>
-                </a>
-                <a href="#" class="restau-link">
-                    <div class="restau-card">
-                        <div id="restau-img4"></div>
-                        <span class="restau-tit">Le délice des sens</span>
-                        <br><span class="restau-tex">Folie-Méricourt</span>
+                </div>
+                <div class="restau-card" id="card4">
+                    <div id="restau-img4"></div>
+                    <div class="restau-descr">
+                        <div>
+                            <span class="restau-tit">Le délice des sens</span>
+                            <br><span class="restau-tex">Folie-Méricourt</span>
+                        </div>
+                        <a href="Le-delice.html" class="restau-link"><i class="far fa-heart coeur"></i></a>
                     </div>
-                </a>
+                </div>
             </section>
         </main>
         <footer>
             <h3>ohmyfood</h3>
-            <p><a href="#">-icône- Proposer un restaurant</a></p>
-            <p><a href="#">-icône- Devenir partenaire</a></p>
+            <p id="footer-ligne1">
+                <a href="#"><i class="fas fa-utensils footer-ico"></i>
+                Proposer un restaurant</a>
+            </p>
+            <p>
+                <a href="#"><i class="fas fa-hands-helping footer-ico"></i>
+                Devenir partenaire</a>
+            </p>
             <p><a href="#">Mentions légales</a></p>
-            <p><a href="mailto:email@sample.com">Contact</a></p>
+            <p id="footer-ligne4"><a href="mailto:email@sample.com">Contact</a></p>
         </footer>
-        <div id="color1"></div>
-        <div id="color2"></div>
-        <div id="color3"></div>
-        <div>FIN !</div>
     </body>
 </html>

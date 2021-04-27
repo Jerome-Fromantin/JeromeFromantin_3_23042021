@@ -14,14 +14,14 @@ body {
 
 #logo {
     width: 45%;
-    margin: 22px 0 12px 0
+    margin: 22px 0 10px 0
 }
 
 #lieusection {
     background: #EAEAEA;
     padding: 13px 0;
     border-top:4px #DDD solid;
-    margin: 0 -8px
+    margin: 0 $margin-hor
 }
 
 #icone-lieu {
@@ -31,7 +31,7 @@ body {
 #presentation {
     background: #F6F6F6;
     padding: 0px 20px;
-    margin: -20px -8px 0 -8px
+    margin: -20px $margin-hor 0 $margin-hor
 }
 
 h1 {
@@ -44,25 +44,25 @@ h1 {
     font-weight: 100
 }
 
+/* Bouton en dégradé */
 #explorer {
     cursor: pointer;
     background: linear-gradient(to bottom right, $secondaire, $primaire);
     box-shadow:0px 5px 5px #CCC;
     color: white;
     font-size: 16px;
-    padding: 15px 20px;
+    padding: 15px 22px;
     border-width: 0;
     border-radius: 50px;
-    margin: 10px 0 55px 0
+    margin: 13px 0 55px 0
 }
 
-h2 {
+h2, h3 {
     text-align: left;
     margin: 50px 0 0 10px
 }
 
 #fonc-ligne1, #fonc-ligne2, #fonc-ligne3 {
-    cursor: pointer;
     display: flex;
     margin: 25px 0
 }
@@ -102,26 +102,32 @@ h2 {
 }
 
 #restaurants {
-    border: 1px transparent solid;
     background: #F6F6F6;
     padding: 0px 20px;
-    margin: 0 -8px
+    border: 1px transparent solid;
+    margin: 0 $margin-hor
 }
 
-.restau-link {
-    text-decoration: none;
-    color: black;
-    width: 100%
-}
-
-/* A MODIFIER */
 .restau-card {
+    position: relative;
     background-color: white;
-    border-radius: 20px;
     box-shadow: 0px 5px 5px #DDD;
     text-align: left;
+    width: 100%;
     height: auto;
-    margin-bottom: 40px
+    border-radius: 20px;
+    margin: 18px 0
+}
+
+.nouveau {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 15px;
+    font-weight: bold;
+    color: darken($tertiaire, 40);
+    background: $tertiaire;
+    padding: 5px 11px
 }
 
 .restau-descr {
@@ -145,10 +151,22 @@ h2 {
     margin-top: 10px
 }
 
-.coeur {
+.restau-link {
     align-self: center;
-    font-size: 20px;
     margin-right: 25px
+}
+
+.coeur {
+    font-size: 20px;
+    color: black
+}
+
+#card1 {
+    margin: 22px 0 10px 0
+}
+
+#card4 {
+    margin-bottom: 62px
 }
 
 #restau-img1, #restau-img2, #restau-img3, #restau-img4 {
@@ -161,40 +179,60 @@ h2 {
 
 #restau-img1 {
     background-image: url(Images/La-palette.jpg);
-    background-position: center bottom;
+    background-position: center bottom
 }
 
 #restau-img2 {
-    background-image: url(Images/La-note.jpg)
+    background-image: url(Images/La-note.jpg);
+    background-position: center bottom 38%
 }
 
 #restau-img3 {
-    background-image: url(Images/A-la-francaise.jpg)
+    background-image: url(Images/A-la-francaise.jpg);
+    background-position: center bottom
 }
 
 #restau-img4 {
-    background-image: url(Images/Le-delice.jpg)
+    background-image: url(Images/Le-delice.jpg);
+    background-position: center bottom
 }
-/* FIN */
+
+footer {
+    background: #353535;
+    color: white;
+    padding: 0px 8px;
+    border: 1px transparent solid;
+    margin: 0 $margin-hor -8px $margin-hor;
+    p {
+        text-align: left;
+        padding: 0 8px;
+        margin: 7px 0
+    }
+    a {
+        text-decoration: none;
+        color: white
+    }
+    a:hover {
+        text-decoration: underline
+    }
+}
 
 h3 {
     font-family: 'Shrikhand', cursive;
+    font-weight: normal;
+    padding-top: 0;
+    margin-top: 20px
 }
 
-#color1, #color2, #color3 {
-    width: 20px;
-    height: 20px;
-    margin: 10px auto
+#footer-ligne1 {
+    margin-top: 18px
 }
 
-#color1 {
-    background: $primaire
+.footer-ico {
+    font-size: 11px;
+    width: 18px
 }
 
-#color2 {
-    background: $secondaire
-}
-
-#color3 {
-    background: $tertiaire
+#footer-ligne4 {
+    margin-bottom: 34px
 }
