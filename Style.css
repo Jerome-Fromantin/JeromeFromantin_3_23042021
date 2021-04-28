@@ -1,10 +1,13 @@
 @charset "UTF-8";
+/* CSS POUR TOUTES LES PAGES DU SITE
+OU SEULEMENT LA PAGE D'ACCUEIL. */
 body {
   font-family: "Roboto", sans-serif;
   text-align: center;
 }
 
 #logosection {
+  position: relative;
   margin-top: -8px;
 }
 
@@ -40,7 +43,7 @@ h1 {
   font-weight: 100;
 }
 
-/* Bouton en dégradé */
+/* Bouton en dégradé. */
 #explorer {
   cursor: pointer;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -115,6 +118,7 @@ h2, h3 {
   margin: 18px 0;
 }
 
+/* Bouton vert de nouveauté sur les cartes. */
 .nouveau {
   position: absolute;
   top: 5%;
@@ -231,6 +235,162 @@ h3 {
 
 #footer-ligne4 {
   margin-bottom: 34px;
+}
+
+/* CSS POUR LES 4 PAGES DE MENUS. */
+/* Bouton de retour à l'accueil. */
+.retour {
+  position: absolute;
+  top: 35%;
+  left: 4%;
+  font-size: 18px;
+}
+
+/* Image, nom et coeur. */
+#banniere {
+  background-color: #F6F6F6;
+  width: 100vw;
+  height: auto;
+  margin: 0 -8px;
+}
+
+.menu-img {
+  background-position: center top;
+  background-size: 110%;
+  height: 270px;
+}
+
+/* Nom + coeur. */
+#menu-nom {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: #F6F6F6;
+  padding: 30px 20px 0 20px;
+  border-radius: 40px 40px 0 0;
+  margin-top: -50px;
+}
+
+/* Nom seulement. */
+#menu-titre {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-coeur {
+  font-size: 25px;
+  color: #777;
+  margin-right: 15px;
+}
+
+#La-palette {
+  /* Comparer avec class="menu-img". */
+  background-image: url(Images/La-palette.jpg);
+  /*background-position: center top;
+  background-size: 110%*/
+}
+
+#La-note {
+  /* Comparer avec class="menu-img". */
+  background-image: url(Images/La-note.jpg);
+  /*background-position: center top;
+  background-size: 110%*/
+}
+
+#A-la-francaise {
+  /* Comparer avec class="menu-img". */
+  background-image: url(Images/A-la-francaise.jpg);
+  /*background-position: center top;
+  background-size: 110%*/
+}
+
+#Le-delice {
+  /* Comparer avec class="menu-img". */
+  background-image: url(Images/Le-delice.jpg);
+  /*background-position: center top;
+  background-size: 110%*/
+}
+
+#entrees, #plats, #desserts {
+  background-color: #F6F6F6;
+  text-align: left;
+  padding: 32px 20px 10px 20px;
+  margin: 0 -8px;
+}
+
+/* Titres Entrées/Plats/Desserts. */
+.menu-EPD {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.trait-vert {
+  width: 35px;
+  border: 1px #99E2D0 solid;
+  margin-top: 5px;
+}
+
+.menu-ligne1, .menu-ligne2, .menu-ligne3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background: white;
+  box-shadow: 0px 5px 5px #EAEAEA;
+  width: auto;
+  padding: 13px 20px;
+  border-radius: 20px;
+  margin: 25px -8px;
+}
+
+.menu-ligne1 {
+  margin-top: 14px;
+}
+
+.test {
+  border: 1px black solid;
+}
+
+.plat {
+  padding: 0;
+  margin-left: -6px;
+}
+
+.plat-titre {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.plat-info {
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.prix {
+  align-self: flex-end;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 3px;
+}
+
+.menu-ligne3 {
+  margin-bottom: 70px;
+}
+
+.menu-tex {
+  font-weight: bold;
+}
+
+#plats {
+  border: 1px green solid;
+}
+
+#desserts {
+  border: 1px blue solid;
 }
 
 /*# sourceMappingURL=Style.css.map */
