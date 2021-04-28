@@ -11,10 +11,11 @@ Travail réalisé :
 - Dépôt des dossiers et fichiers Sass,
 - Premier dépôt des fichiers scss et html,
 - Hébergement du travail sur Git Pages,
-- Intégration de la page d'accueil sans les animations.
+- Intégration de la page d'accueil sans les animations,
+- Début d'intégration de la 1ère page de menu sans les animations.
 
 Travail en cours :
-- XXX.
+- Intégration de la 1ère page de menu sans les animations.
 
 Travail à faire :
 - Intégration des 4 autres pages sans les animations,
