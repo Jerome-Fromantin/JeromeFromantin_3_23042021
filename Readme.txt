@@ -12,14 +12,13 @@ Travail réalisé :
 - Premier dépôt des fichiers scss et html,
 - Hébergement du travail sur Git Pages,
 - Intégration de la page d'accueil sans les animations,
-- Début d'intégration de la 1ère page de menu sans les animations.
+- Intégration des 4 pages de menu sans les animations,
+- Début d'intégration des animations en page d'accueil.
 
 Travail en cours :
-- Intégration de la 1ère page de menu sans les animations.
+- Ajout des animations en page d'accueil.
 
 Travail à faire :
-- Intégration des 4 autres pages sans les animations,
-- Ajout des animations en page d'accueil,
 - Ajout des animations sur les 4 autres pages,
 - Media queries pour tablette et desktop pour la page d'accueil,
 - Media queries pour tablette et desktop pour les 4 autres pages.
