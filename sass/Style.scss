@@ -7,7 +7,53 @@
 OU SEULEMENT LA PAGE D'ACCUEIL. */
 body {
     font-family: 'Roboto', sans-serif;
-    text-align: center
+    text-align: center;
+    position: relative
+}
+
+.spinner {
+    cursor: pointer;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background: transparent;
+    width: 300px;
+    height: 300px;
+    border: 20px solid;
+    border-color: transparent;
+    border-radius: 50%;
+    margin: auto;
+    &:hover {
+        animation-play-state: paused
+    }
+    animation: spinner 3000ms 500ms cubic-bezier(.6, .1, .4, .9)
+}
+
+@keyframes spinner {
+    0% {
+        z-index: 3;
+        opacity: 1;
+        transform: rotate(0);
+        border-top-color: $primaire
+    }
+    33% {
+        transform: rotate(1.0turn);
+        border-top-color: $secondaire
+    }
+    67% {
+        transform: rotate(2.0turn);
+        border-top-color: $tertiaire
+    }
+    100% {
+        z-index: 3;
+        opacity: 1;
+        transform: rotate(3.0turn);
+        border-top-color: $primaire
+    }
 }
 
 #logosection {
@@ -58,9 +104,11 @@ h1 {
     border-width: 0;
     border-radius: 50px;
     margin: 13px 0 55px 0;
+    transition: all 400ms;
     &:hover {
-        background: linear-gradient(to bottom right, #FFACE8, #AE80E5);
-        box-shadow:0px 5px 5px darken(#CCC, 20)
+        /* VOIR LA TRANSITION DU DEGRADE !!! */
+        background: linear-gradient(to bottom right, #FF46CC/*darken($secondaire, 10)*/, #782CD3/*darken($primaire, 10)*/);
+        box-shadow: 0px 5px 5px darken(#CCC, 20)
     }
 }
 
@@ -97,9 +145,10 @@ h2, h3 {
     padding: 26px;
     border-radius: 20px;
     margin-left: -2px;
+    transition: all 400ms;
     &:hover {
         background: #F5EDFF;
-        box-shadow:0px 5px 5px darken(#DDD, 20);
+        box-shadow: 0px 5px 5px darken(#DDD, 20);
         .fonc-ico {
             color: $primaire
         }
@@ -124,6 +173,12 @@ h2, h3 {
     margin: 0 $margin-hor
 }
 
+/* Lien englobant chaque carte. */
+.restau-link {
+    text-decoration: none;
+    color: black
+}
+
 .restau-card {
     position: relative;
     background-color: white;
@@ -132,7 +187,11 @@ h2, h3 {
     width: 100%;
     height: auto;
     border-radius: 20px;
-    margin: 18px 0
+    margin: 18px 0;
+    transition: box-shadow 400ms;
+    &:hover {
+        box-shadow: 0px 5px 5px darken(#DDD, 20)
+    }
 }
 
 /* Bouton vert de nouveauté sur les cartes. */
@@ -144,7 +203,12 @@ h2, h3 {
     font-weight: bold;
     color: darken($tertiaire, 40);
     background: $tertiaire;
-    padding: 5px 11px
+    padding: 5px 11px;
+    transition: all 400ms;
+    &:hover {
+        color: white;
+        background: $primaire
+    }
 }
 
 /* Nom, lieu et coeur. */
@@ -169,30 +233,51 @@ h2, h3 {
     margin-top: 10px
 }
 
-/* Lien englobant le coeur. */
-.restau-link {
-    align-self: center;
-    margin-right: 25px
-}
-
 .coeur {
+    align-self: center;
+    position: relative;
+    z-index: 1;
     font-size: 20px;
+    background: white;
     color: black;
+    margin-right: 25px;
     &:hover {
-        color: red
+        //display: none;
+        //z-index: -1;
+        &::after {
+            //display: inline;
+            //z-index: 2;
+            opacity: 1;
+            //font-size: 20px;
+            //font-weight: bold;
+            //background-clip: text;
+            //-webkit-background-clip: text;
+            //-moz-background-clip: text;
+            //background: linear-gradient(to bottom right, $secondaire, $primaire);
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: red;
+        opacity: 0;
+        //transform-origin: bottom;
+        transition: opacity 2000ms
     }
 }
 
-/* Lien englobant le coeur en hover. */
-.restau-link2 {
+/* Coeur en hover. */
+.fas.coeur2 {
     display: none;
-    align-self: center;
-    margin-right: 25px;
-}
-
-.coeur2 {
-    font-size: 20px;
-    color: red
+    /*align-self: center;
+    opacity: 0;
+    color: red;
+    font-size: 20px*/
 }
 
 #card1 {

@@ -4,8 +4,53 @@ OU SEULEMENT LA PAGE D'ACCUEIL. */
 body {
   font-family: "Roboto", sans-serif;
   text-align: center;
+  position: relative;
 }
 
+.spinner {
+  cursor: pointer;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background: transparent;
+  width: 300px;
+  height: 300px;
+  border: 20px solid;
+  border-color: transparent;
+  border-radius: 50%;
+  margin: auto;
+  animation: spinner 3000ms 500ms cubic-bezier(0.6, 0.1, 0.4, 0.9);
+}
+.spinner:hover {
+  animation-play-state: paused;
+}
+
+@keyframes spinner {
+  0% {
+    z-index: 3;
+    opacity: 1;
+    transform: rotate(0);
+    border-top-color: #9356DC;
+  }
+  33% {
+    transform: rotate(1turn);
+    border-top-color: #FF79DA;
+  }
+  67% {
+    transform: rotate(2turn);
+    border-top-color: #99E2D0;
+  }
+  100% {
+    z-index: 3;
+    opacity: 1;
+    transform: rotate(3turn);
+    border-top-color: #9356DC;
+  }
+}
 #logosection {
   position: relative;
   margin-top: -8px;
@@ -54,9 +99,11 @@ h1 {
   border-width: 0;
   border-radius: 50px;
   margin: 13px 0 55px 0;
+  transition: all 400ms;
 }
 #explorer:hover {
-  background: linear-gradient(to bottom right, #FFACE8, #AE80E5);
+  /* VOIR LA TRANSITION DU DEGRADE !!! */
+  background: linear-gradient(to bottom right, #FF46CC, #782CD3);
   box-shadow: 0px 5px 5px #999999;
 }
 
@@ -93,6 +140,7 @@ h2, h3 {
   padding: 26px;
   border-radius: 20px;
   margin-left: -2px;
+  transition: all 400ms;
 }
 .fonc-gris:hover {
   background: #F5EDFF;
@@ -120,6 +168,12 @@ h2, h3 {
   margin: 0 -8px;
 }
 
+/* Lien englobant chaque carte. */
+.restau-link {
+  text-decoration: none;
+  color: black;
+}
+
 .restau-card {
   position: relative;
   background-color: white;
@@ -129,6 +183,10 @@ h2, h3 {
   height: auto;
   border-radius: 20px;
   margin: 18px 0;
+  transition: box-shadow 400ms;
+}
+.restau-card:hover {
+  box-shadow: 0px 5px 5px #aaaaaa;
 }
 
 /* Bouton vert de nouveauté sur les cartes. */
@@ -141,6 +199,11 @@ h2, h3 {
   color: #278870;
   background: #99E2D0;
   padding: 5px 11px;
+  transition: all 400ms;
+}
+.nouveau:hover {
+  color: white;
+  background: #9356DC;
 }
 
 /* Nom, lieu et coeur. */
@@ -165,30 +228,38 @@ h2, h3 {
   margin-top: 10px;
 }
 
-/* Lien englobant le coeur. */
-.restau-link {
-  align-self: center;
-  margin-right: 25px;
-}
-
 .coeur {
-  font-size: 20px;
-  color: black;
-}
-.coeur:hover {
-  color: red;
-}
-
-/* Lien englobant le coeur en hover. */
-.restau-link2 {
-  display: none;
   align-self: center;
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  background: white;
+  color: black;
   margin-right: 25px;
 }
+.coeur:hover::after {
+  opacity: 1;
+}
+.coeur::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: red;
+  opacity: 0;
+  transition: opacity 2000ms;
+}
 
-.coeur2 {
-  font-size: 20px;
+/* Coeur en hover. */
+.fas.coeur2 {
+  display: none;
+  /*align-self: center;
+  opacity: 0;
   color: red;
+  font-size: 20px*/
 }
 
 #card1 {
