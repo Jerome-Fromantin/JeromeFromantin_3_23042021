@@ -13,12 +13,13 @@ Travail réalisé :
 - Hébergement du travail sur Git Pages,
 - Intégration de la page d'accueil sans les animations,
 - Intégration des 4 pages de menu sans les animations,
-- Début d'intégration des animations en page d'accueil.
+- Intégration des transitions et animations en page d'accueil,
+- Début d'intégration des transitions et animations sur les 4 pages aditionnelles.
 
 Travail en cours :
-- Ajout des animations en page d'accueil.
+- Ajout des transitions et animations sur les 4 pages aditionnelles.
 
 Travail à faire :
-- Ajout des animations sur les 4 autres pages,
+- Fin d'ajout des transitions et animations sur les 4 pages aditionnelles,
 - Media queries pour tablette et desktop pour la page d'accueil,
 - Media queries pour tablette et desktop pour les 4 autres pages.
