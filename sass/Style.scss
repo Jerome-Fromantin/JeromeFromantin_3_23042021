@@ -27,9 +27,10 @@ body {
     border-color: transparent;
     border-radius: 50%;
     margin: auto;
-    &:hover {
+    /* Ci-dessous, l'animation peut être mise en pause. */
+    /*&:hover {
         animation-play-state: paused
-    }
+    }*/
     animation: spinner 3000ms 500ms cubic-bezier(.6, .1, .4, .9)
 }
 
@@ -106,9 +107,8 @@ h1 {
     margin: 13px 0 55px 0;
     transition: all 400ms;
     &:hover {
-        /* VOIR LA TRANSITION DU DEGRADE !!! */
-        background: linear-gradient(to bottom right, #FF46CC/*darken($secondaire, 10)*/, #782CD3/*darken($primaire, 10)*/);
-        box-shadow: 0px 5px 5px darken(#CCC, 20)
+        background: linear-gradient(to bottom right, darken($secondaire, 10), darken($primaire, 10));
+        box-shadow: 0px 5px 5px darken(#CCC, 40)
     }
 }
 
@@ -148,7 +148,7 @@ h2, h3 {
     transition: all 400ms;
     &:hover {
         background: #F5EDFF;
-        box-shadow: 0px 5px 5px darken(#DDD, 20);
+        box-shadow: 0px 5px 5px darken(#DDD, 40);
         .fonc-ico {
             color: $primaire
         }
@@ -188,9 +188,10 @@ h2, h3 {
     height: auto;
     border-radius: 20px;
     margin: 18px 0;
-    transition: box-shadow 400ms;
+    transition: all 400ms;
     &:hover {
-        box-shadow: 0px 5px 5px darken(#DDD, 20)
+        background: #F5EDFF;
+        box-shadow: 0px 5px 5px darken(#DDD, 40)
     }
 }
 
@@ -236,48 +237,28 @@ h2, h3 {
 .coeur {
     align-self: center;
     position: relative;
-    z-index: 1;
     font-size: 20px;
-    background: white;
+    background: transparent;
     color: black;
     margin-right: 25px;
     &:hover {
-        //display: none;
-        //z-index: -1;
         &::after {
-            //display: inline;
-            //z-index: 2;
-            opacity: 1;
-            //font-size: 20px;
-            //font-weight: bold;
-            //background-clip: text;
-            //-webkit-background-clip: text;
-            //-moz-background-clip: text;
-            //background: linear-gradient(to bottom right, $secondaire, $primaire);
+            width: 21px;
+            height: 21px;
+            transform: scale(1);
+            background-image: url("Images/Coeur-plein.svg")
         }
     }
     &::after {
         content: "";
         position: absolute;
-        z-index: -1;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background: red;
-        opacity: 0;
-        //transform-origin: bottom;
-        transition: opacity 2000ms
+        transform: scale(0);
+        transition: transform 400ms linear;
     }
-}
-
-/* Coeur en hover. */
-.fas.coeur2 {
-    display: none;
-    /*align-self: center;
-    opacity: 0;
-    color: red;
-    font-size: 20px*/
 }
 
 #card1 {
@@ -442,13 +423,25 @@ h3 {
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 100;
-    margin: 0
+    margin: 0;
+    animation: menu-delay 3000ms ease-in-out both
+}
+
+/*#menu-EPD1, #trait-vert1 {
+    animation-delay: 0
+}*/
+#menu-EPD2, #trait-vert2 {
+    animation-delay: 1000ms
+}
+#menu-EPD3, #trait-vert3 {
+    animation-delay: 2000ms
 }
 
 .trait-vert {
     width: 35px;
     border: 1px $tertiaire solid;
-    margin-top: 5px
+    margin-top: 5px;
+    animation: menu-delay 3000ms ease-in-out both
 }
 
 /* Chacune des 3 ou 4 lignes de chaque section. */
@@ -462,7 +455,26 @@ h3 {
     padding: 14px 20px;
     border-radius: 20px;
     margin: 13px $margin-hor;
+    transition: all 400ms;
+    animation: menu-delay 3000ms /*1000ms*/ ease-in-out;
+    &:hover {
+        background: #F5EDFF;
+        box-shadow: 0px 5px 5px darken(#EAEAEA, 40)
+    }
 }
+
+/* PARTIE A MODIFIER !! */
+@keyframes menu-delay {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+/* FIN */
 
 .menu-ligne1 {
     margin-top: 14px
@@ -528,5 +540,10 @@ h3 {
     padding: 15px 50px;
     border-width: 0;
     border-radius: 50px;
-    margin: 13px 0 55px 0
+    margin: 13px 0 55px 0;
+    transition: all 400ms;
+    &:hover {
+        background: linear-gradient(to bottom right, darken($secondaire, 10), darken($primaire, 10));
+        box-shadow: 0px 5px 5px darken(#CCC, 40)
+    }
 }
