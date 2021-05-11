@@ -238,9 +238,9 @@ h2, h3 {
   margin-right: 25px;
 }
 .coeur:hover::after {
-  width: 21px;
-  height: 21px;
-  transform: scale(1);
+  width: 20px;
+  height: 20px;
+  transform: scale(1.2);
   background-image: url("Images/Coeur-plein.svg");
 }
 .coeur::after {
@@ -441,15 +441,17 @@ h3 {
   border-radius: 20px;
   margin: 13px -8px;
   overflow: hidden;
-  transition: all 400ms, selection 2s;
+  transition: all 400ms;
   animation: menu-delay 500ms cubic-bezier(0, 0.5, 0.5, 1) both;
 }
 .menu-ligne1:hover, .menu-ligne2:hover, .menu-ligne3:hover, .menu-ligne4:hover {
-  background-color: #F5EDFF;
   box-shadow: 0px 5px 5px #848484;
 }
-.menu-ligne1:hover .prix-test, .menu-ligne1:hover .selection-plat, .menu-ligne2:hover .prix-test, .menu-ligne2:hover .selection-plat, .menu-ligne3:hover .prix-test, .menu-ligne3:hover .selection-plat, .menu-ligne4:hover .prix-test, .menu-ligne4:hover .selection-plat {
-  transform: translate(-64px);
+.menu-ligne1:hover .prix, .menu-ligne1:hover .selection-plat, .menu-ligne2:hover .prix, .menu-ligne2:hover .selection-plat, .menu-ligne3:hover .prix, .menu-ligne3:hover .selection-plat, .menu-ligne4:hover .prix, .menu-ligne4:hover .selection-plat {
+  transform: translate(-63px);
+}
+.menu-ligne1:hover .ico-selec, .menu-ligne2:hover .ico-selec, .menu-ligne3:hover .ico-selec, .menu-ligne4:hover .ico-selec {
+  transform: rotate(1turn);
 }
 
 /*#menu-EPD-entree, #trait-vert-entree {
@@ -542,6 +544,17 @@ h3 {
 .plat-titre {
   font-size: 18px;
   font-weight: bold;
+  width: auto;
+}
+
+.plat-info-test {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 100;
+  width: auto;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 .plat-info {
@@ -554,26 +567,29 @@ h3 {
   font-size: 14px;
   font-weight: bold;
   margin-right: 3px;
+  transition: transform 400ms linear;
 }
 
-.prix-test {
-  align-self: flex-end;
-  font-size: 14px;
-  font-weight: bold;
-  margin-right: 3px;
-}
-
+/* Zone verte apparaîssant en survol du plat. */
 .selection-plat {
-  background: #99E2D0;
-  opacity: 0.5;
+  background-color: #99E2D0;
   position: absolute;
   top: 0;
-  right: -64px;
+  right: -63px;
   bottom: 0;
   width: 18%;
   height: 100%;
   text-align: center;
+  padding-top: 19px;
   border-radius: 0 20px 20px 0;
+  transition: transform 400ms linear;
+}
+
+/* Icône dans la zone verte. */
+.ico-selec {
+  color: white;
+  font-size: 30px;
+  transition: transform 400ms linear;
 }
 
 /* Section. */
