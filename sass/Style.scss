@@ -456,7 +456,15 @@ h3 {
             transform: translate(-63px)
         }
         .ico-selec {
-            transform: rotate(1.0turn)
+            animation: rotation 400ms linear
+        }
+        .plat-info-px {
+            width: 210px
+        }
+    }
+    &:not(:hover) {
+        .ico-selec {
+            animation-play-state: paused
         }
     }
 }
@@ -539,34 +547,30 @@ h3 {
 }
 
 .plat-titre {
-    //border: 1px goldenrod solid;
     font-size: 18px;
     font-weight: bold;
     width: auto
 }
 
-.plat-info-test {
+.plat-info {
     display: inline-block;
-    //border: 1px red solid;
     font-size: 15px;
     font-weight: 100;
     width: auto;
+    text-overflow: ellipsis;
     overflow: hidden;
+    white-space: nowrap;
     padding: 0;
-    margin: 0;
-    //@if (width > 50px) {
-	//	overflow: hidden
-	//}
+    margin: 0
+}
+.plat-info-test {
+    border: 1px red solid
 }
 
-.plat-info {
-    //border: 1px blue solid;
-    font-size: 15px;
-    font-weight: 100;
-    //width: 300px;
-	//@if (width > 50px) {
-	//	overflow: hidden
-	//}
+/* Transitions sur les lignes longues. */
+.plat-info-px {
+    width: 280px;
+    transition: width 400ms linear
 }
 
 .prix {
@@ -577,7 +581,7 @@ h3 {
     transition: transform 400ms linear
 }
 
-/* Zone verte apparaîssant en survol du plat. */
+/* Zone verte en survol du plat. */
 .selection-plat {
     background-color: $tertiaire;
     position: absolute;
@@ -592,11 +596,24 @@ h3 {
     transition: transform 400ms linear
 }
 
+/* Zone verte en survol du plat sur 3 lignes. */
+#selection-3lignes {
+    padding-top: 32px
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(1.0turn)
+    }
+}
+
 /* Icône dans la zone verte. */
 .ico-selec {
     color: white;
-    font-size: 30px;
-    transition: transform 400ms linear
+    font-size: 30px
 }
 
 /* Section. */

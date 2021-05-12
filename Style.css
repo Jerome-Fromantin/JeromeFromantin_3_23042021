@@ -451,7 +451,13 @@ h3 {
   transform: translate(-63px);
 }
 .menu-ligne1:hover .ico-selec, .menu-ligne2:hover .ico-selec, .menu-ligne3:hover .ico-selec, .menu-ligne4:hover .ico-selec {
-  transform: rotate(1turn);
+  animation: rotation 400ms linear;
+}
+.menu-ligne1:hover .plat-info-px, .menu-ligne2:hover .plat-info-px, .menu-ligne3:hover .plat-info-px, .menu-ligne4:hover .plat-info-px {
+  width: 210px;
+}
+.menu-ligne1:not(:hover) .ico-selec, .menu-ligne2:not(:hover) .ico-selec, .menu-ligne3:not(:hover) .ico-selec, .menu-ligne4:not(:hover) .ico-selec {
+  animation-play-state: paused;
 }
 
 /*#menu-EPD-entree, #trait-vert-entree {
@@ -547,19 +553,26 @@ h3 {
   width: auto;
 }
 
-.plat-info-test {
+.plat-info {
   display: inline-block;
   font-size: 15px;
   font-weight: 100;
   width: auto;
+  text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
   padding: 0;
   margin: 0;
 }
 
-.plat-info {
-  font-size: 15px;
-  font-weight: 100;
+.plat-info-test {
+  border: 1px red solid;
+}
+
+/* Transitions sur les lignes longues. */
+.plat-info-px {
+  width: 280px;
+  transition: width 400ms linear;
 }
 
 .prix {
@@ -570,7 +583,7 @@ h3 {
   transition: transform 400ms linear;
 }
 
-/* Zone verte apparaîssant en survol du plat. */
+/* Zone verte en survol du plat. */
 .selection-plat {
   background-color: #99E2D0;
   position: absolute;
@@ -585,11 +598,23 @@ h3 {
   transition: transform 400ms linear;
 }
 
+/* Zone verte en survol du plat sur 3 lignes. */
+#selection-3lignes {
+  padding-top: 32px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
 /* Icône dans la zone verte. */
 .ico-selec {
   color: white;
   font-size: 30px;
-  transition: transform 400ms linear;
 }
 
 /* Section. */
