@@ -15,11 +15,12 @@ Travail réalisé :
 - Intégration des 4 pages de menu sans les animations,
 - Intégration des transitions et animations en page d'accueil,
 - Intégration des transitions et animations sur les 4 pages aditionnelles,
-- Début d'ajout des media queries pour tablette et desktop pour la page d'accueil.
+- Ajout des media queries pour tablette et desktop pour la page d'accueil,
+- Début d'ajout des media queries pour tablette et desktop pour les 4 pages aditionnelles.
 
 Travail en cours :
-- Ajout des media queries pour tablette et desktop pour la page d'accueil.
+- Ajout des media queries pour tablette et desktop pour les 4 pages aditionnelles.
 
 Travail à faire :
-- Fin d'ajout des media queries pour tablette et desktop pour la page d'accueil,
-- Media queries pour tablette et desktop pour les 4 autres pages.
+- Media queries pour tablette et desktop pour les 4 autres pages,
+- Améliorations éventuelles.
