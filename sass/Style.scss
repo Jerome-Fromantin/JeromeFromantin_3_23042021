@@ -11,6 +11,29 @@ body {
     position: relative
 }
 
+@keyframes spinner {
+    0% {
+        z-index: 3;
+        opacity: 1;
+        transform: rotate(0);
+        border-top-color: $primaire
+    }
+    33% {
+        transform: rotate(1.0turn);
+        border-top-color: $secondaire
+    }
+    67% {
+        transform: rotate(2.0turn);
+        border-top-color: $tertiaire
+    }
+    100% {
+        z-index: 3;
+        opacity: 1;
+        transform: rotate(3.0turn);
+        border-top-color: $primaire
+    }
+}
+
 .spinner {
     cursor: pointer;
     position: fixed;
@@ -34,27 +57,24 @@ body {
     animation: spinner 3000ms 500ms cubic-bezier(.6, .1, .4, .9)
 }
 
-@keyframes spinner {
+@keyframes back-spinner {
     0% {
-        z-index: 3;
-        opacity: 1;
-        transform: rotate(0);
-        border-top-color: $primaire
+        opacity: 0.1
     }
-    33% {
-        transform: rotate(1.0turn);
-        border-top-color: $secondaire
-    }
-    67% {
-        transform: rotate(2.0turn);
-        border-top-color: $tertiaire
+    90% {
+        opacity: 0.1
     }
     100% {
-        z-index: 3;
-        opacity: 1;
-        transform: rotate(3.0turn);
-        border-top-color: $primaire
+        opacity: 1
     }
+}
+
+header, main, footer {
+    animation: back-spinner 3500ms linear
+}
+
+#header-restau, #main-restau, #footer-restau {
+    animation: none
 }
 
 #logosection {
@@ -120,7 +140,9 @@ h2, h3 {
 #fonc-ligne1, #fonc-ligne2, #fonc-ligne3 {
     cursor: pointer;
     display: flex;
-    margin: 25px 0
+    justify-content: center;
+    max-width: 410px;
+    margin: 25px auto
 }
 
 #fonc-ligne3 {
@@ -144,7 +166,7 @@ h2, h3 {
     text-align: left;
     padding: 26px;
     border-radius: 20px;
-    margin-left: -2px;
+    margin: 0 10px 0 -2px;
     transition: all 400ms;
     &:hover {
         background: #F5EDFF;
@@ -180,11 +202,13 @@ h2, h3 {
 }
 
 .restau-card {
+    display: inline-block;
     position: relative;
     background-color: white;
     box-shadow: 0px 5px 5px #DDD;
     text-align: left;
     width: 100%;
+    max-width: 500px;
     height: auto;
     border-radius: 20px;
     margin: 18px 0;
@@ -444,22 +468,23 @@ h3 {
     background-color: white;
     box-shadow: 0px 5px 5px #EAEAEA;
     width: auto;
+    max-width: 400px;
     padding: 14px 20px;
     border-radius: 20px;
-    margin: 13px $margin-hor;
+    margin: 13px auto; //$margin-hor;
     overflow: hidden;
     transition: all 400ms;
     animation: menu-delay 500ms cubic-bezier(0,.5,.5,1) both;
     &:hover {
         box-shadow: 0px 5px 5px darken(#EAEAEA, 40);
         .prix, .selection-plat {
-            transform: translate(-63px)
+            transform: translate(-64px)
         }
         .ico-selec {
             animation: rotation 400ms linear
         }
         .plat-info-px {
-            width: 210px
+            width: 190px
         }
     }
     &:not(:hover) {
@@ -563,11 +588,9 @@ h3 {
     padding: 0;
     margin: 0
 }
-.plat-info-test {
-    border: 1px red solid
-}
 
 /* Transitions sur les lignes longues. */
+/* A partir de 464px, cette transition ne doit plus se faire. */
 .plat-info-px {
     width: 280px;
     transition: width 400ms linear
@@ -586,9 +609,9 @@ h3 {
     background-color: $tertiaire;
     position: absolute;
     top: 0;
-    right: -63px;
+    right: -64px;
     bottom: 0;
-    width: 18%;
+    width: 64px;
     height: 100%;
     text-align: center;
     padding-top: 19px;
