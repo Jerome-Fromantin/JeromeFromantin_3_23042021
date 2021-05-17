@@ -16,11 +16,7 @@ Travail réalisé :
 - Intégration des transitions et animations en page d'accueil,
 - Intégration des transitions et animations sur les 4 pages aditionnelles,
 - Ajout des media queries pour tablette et desktop pour la page d'accueil,
-- Début d'ajout des media queries pour tablette et desktop pour les 4 pages aditionnelles.
-
-Travail en cours :
 - Ajout des media queries pour tablette et desktop pour les 4 pages aditionnelles.
 
 Travail à faire :
-- Media queries pour tablette et desktop pour les 4 autres pages,
 - Améliorations éventuelles.
