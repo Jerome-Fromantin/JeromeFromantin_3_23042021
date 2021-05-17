@@ -472,7 +472,7 @@ h3 {
   box-shadow: 0px 5px 5px #848484;
 }
 .menu-ligne1:hover .prix, .menu-ligne1:hover .selection-plat, .menu-ligne2:hover .prix, .menu-ligne2:hover .selection-plat, .menu-ligne3:hover .prix, .menu-ligne3:hover .selection-plat, .menu-ligne4:hover .prix, .menu-ligne4:hover .selection-plat {
-  transform: translate(-64px);
+  transform: translate(-50px);
 }
 .menu-ligne1:hover .ico-selec, .menu-ligne2:hover .ico-selec, .menu-ligne3:hover .ico-selec, .menu-ligne4:hover .ico-selec {
   animation: rotation 400ms linear;
@@ -609,9 +609,9 @@ h3 {
   background-color: #99E2D0;
   position: absolute;
   top: 0;
-  right: -64px;
+  right: -50px;
   bottom: 0;
-  width: 64px;
+  width: 50px;
   height: 100%;
   text-align: center;
   padding-top: 19px;

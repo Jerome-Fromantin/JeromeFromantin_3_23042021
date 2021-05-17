@@ -471,14 +471,14 @@ h3 {
     max-width: 400px;
     padding: 14px 20px;
     border-radius: 20px;
-    margin: 13px auto; //$margin-hor;
+    margin: 13px auto;
     overflow: hidden;
     transition: all 400ms;
     animation: menu-delay 500ms cubic-bezier(0,.5,.5,1) both;
     &:hover {
         box-shadow: 0px 5px 5px darken(#EAEAEA, 40);
         .prix, .selection-plat {
-            transform: translate(-64px)
+            transform: translate(-50px)
         }
         .ico-selec {
             animation: rotation 400ms linear
@@ -609,9 +609,9 @@ h3 {
     background-color: $tertiaire;
     position: absolute;
     top: 0;
-    right: -64px;
+    right: -50px;
     bottom: 0;
-    width: 64px;
+    width: 50px;
     height: 100%;
     text-align: center;
     padding-top: 19px;

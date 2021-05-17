@@ -1,3 +1,4 @@
+/* Ces MQ s'appliquent pour des vues tablette et desktop. */
 @media all and (min-width: 601px) {
     .spinner {
         width: 480px;
@@ -25,5 +26,45 @@
     .restau-card, #card1, #card4 {
         margin-left: 10px;
         margin-right: 10px
+    }
+
+    #entrees, #plats, #desserts {
+        text-align: center;
+    }
+
+    .menu-ligne1, .menu-ligne2, .menu-ligne3, .menu-ligne4 {
+        display: inline-flex;
+        text-align: left;
+        width: 400px;
+        margin: 8px 5px
+    }
+    
+    .menu-ligne1 {
+        margin: 13px 5px 8px 5px
+    }
+}
+
+/* Cette MQ fait en sorte que l'info des plats soit moins cachée. */
+@media all and (min-width: 400px) {
+    .menu-ligne1, .menu-ligne2, .menu-ligne3, .menu-ligne4 {
+        &:hover {
+            .plat-info-px {
+                width: 220px
+            }
+        }
+    }
+}
+
+/* Cette MQ empêche que l'info des plats soit cachée. */
+@media all and (min-width: 430px) {
+    .menu-ligne1, .menu-ligne2, .menu-ligne3, .menu-ligne4 {
+        &:hover {
+            .plat-info-px {
+                width: 280px
+            }
+        }
+    }
+    .plat-info-px {
+        transition: none
     }
 }
