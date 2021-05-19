@@ -1,7 +1,7 @@
 @import "libs/variables.scss";
-@import "libs/functions.scss";
-@import "libs/mixins.scss";
-@import "libs/responsive.scss";
+@import "libs/functions.scss"; // inutilisé
+@import "libs/mixins.scss"; // inutilisé
+@import "libs/responsive.scss"; // inutilisé
 
 /* CSS POUR TOUTES LES PAGES DU SITE
 OU SEULEMENT LA PAGE D'ACCUEIL. */
@@ -57,6 +57,7 @@ body {
     animation: spinner 3000ms 500ms cubic-bezier(.6, .1, .4, .9)
 }
 
+/* Arrière-plan pendant le spinner. */
 @keyframes back-spinner {
     0% {
         opacity: 0.1
@@ -374,8 +375,6 @@ h3 {
 /* Image, nom et coeur. */
 #banniere {
     background-color: #F6F6F6;
-    width: 100vw;
-    height: auto;
     margin: 0 $margin-hor
 }
 
@@ -590,7 +589,6 @@ h3 {
 }
 
 /* Transitions sur les lignes longues. */
-/* A partir de 464px, cette transition ne doit plus se faire. */
 .plat-info-px {
     width: 280px;
     transition: width 400ms linear
